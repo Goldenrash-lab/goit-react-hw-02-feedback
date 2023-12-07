@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 
 export default class Statistics extends Component {
   render() {
-    if (!this.props.total) {
-      return <h5>Not feedback given</h5>;
-    }
     return (
       <div>
         <p>

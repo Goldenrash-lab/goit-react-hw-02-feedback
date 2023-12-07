@@ -59,13 +59,17 @@ export class App extends React.Component {
           />
         </Section>
         <Section title="Statistics">
-          <Statistics
-            good={good}
-            neutral={neutral}
-            bad={bad}
-            total={totalFeedback}
-            positivePercentage={positiveFeedback}
-          />
+          {!totalFeedback ? (
+            <h5>Not feedback given</h5>
+          ) : (
+            <Statistics
+              good={good}
+              neutral={neutral}
+              bad={bad}
+              total={totalFeedback}
+              positivePercentage={positiveFeedback}
+            />
+          )}
         </Section>
       </div>
     );
